@@ -20,6 +20,7 @@ class PasskeyFactory extends Factory
 
         return [
             'name' => $this->faker->word,
+            'authenticatable_type' => $authModel::class,
             'authenticatable_id' => $authModel::factory(),
             'credential_id' => $this->faker->sentence,
             'data' => $this->dummyPublicKeyCredentialSource(),
